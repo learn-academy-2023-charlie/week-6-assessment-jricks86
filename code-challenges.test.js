@@ -40,7 +40,7 @@ function newArray(array) {
     // declare new variable to make array a string
     const splitName = person.name.split(" ");
     // declare new variabe to make string capitalized at the first letter using charAt and toUpperCase then attach the rest of the word starting at the 1 index.
-    const firstName = splitName[0].charAt(0).toUpperCase() + splitName[0].slice(1);
+    const firstName = splitName[0,1].charAt(0).toUpperCase() + splitName[0].slice(1);
     // Use conditional statement that checks if the splitName array has more than one element and if so to capitalize first character of second element and concat with remaining. If one element, then assign empty string
     const lastName = splitName.length > 1 ? splitName[1].charAt(0).toUpperCase() + splitName[1].slice(1) : "";
     // use string interprelation for sentence
