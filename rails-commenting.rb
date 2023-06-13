@@ -13,18 +13,18 @@ class BlogPostsController < ApplicationController
      @posts = BlogPost.all
   end
 
-  # define a show controller method to find the post with the matching id and show the post
+  # define a show controller method to find the post with the matching id and show that instance
   def show
     @post = BlogPost.find(params[:id])
   end
 
-  # define a new controller method to create a new blog post
+  # define a new controller method to display an HTML form to input a new blog post
   def new
     @post = BlogPost.new
   end
 
   def create
-    # create a new blog post based on params and if valid redirect to show post
+    # create a new blog post from the new form based on params and if valid redirect to show post
     @post = BlogPost.create(blog_post_params)
     if @post.valid?
       redirect_to blog_post_path(@post)
@@ -32,7 +32,7 @@ class BlogPostsController < ApplicationController
   end
 
   def edit
-    # find a blog post based on id
+    # find a blog post based on id to display a form for modification
     @post = BlogPost.find(params[:id])
   end
 
@@ -53,7 +53,7 @@ class BlogPostsController < ApplicationController
     end
   end
 
-  # make private to control access to the blog post create/edit/update methods
+  # make private to make anything below it only available in the scope of this controller.
   private
   def blog_post_params
     # set blog post requirement params for title and content

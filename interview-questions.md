@@ -20,7 +20,7 @@ Open the newly generated migration file and update it by using the change method
 
 Your answer: Create, Update, and Destroy becuase they are all creating or updating data.
 
-Researched answer: Index, Show, New, and Edit all display data.
+Researched answer: Show, Edit, Update, and Destroy. Edit and New do not pass params because they only display a form for input.
 
 3. Name three rails generator commands. What is created by each?
 
